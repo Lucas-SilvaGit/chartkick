@@ -51,6 +51,7 @@ group :development, :test do
   gem "faker", "~> 3.4"
   gem "pry-rails"
   gem "rubocop-rails"
+  gem "solargraph-rails"
 end
 
 group :development do
