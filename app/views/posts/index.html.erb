@@ -1,7 +1,6 @@
 <p style="color: green"><%= notice %></p>
 <h1>Posts</h1>
-<%= line_chart Post.group_by_day(:created_at, range: 1.month.ago.midnight..Time.now).sum(:views) %>
-<%= column_chart Post.group_by_day(:created_at, format: "%a").sum(:views) %>
+<%= column_chart Post.group_by_day(:created_at, range: 1.month.ago.midnight..Time.now).sum(:views) %>
 <div id="posts">
   <% @posts.each do |post| %>
     <%= render post %>
